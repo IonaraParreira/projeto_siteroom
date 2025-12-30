@@ -32,7 +32,18 @@ Clima: Mistério + desafio + curiosidade
 |Acesso| Final da jornada
 |Mosca| Será você também capaz?,o real significado de  se "acertar na mosca"
 |Participantes| Aqueles que ousaram entrar e...: `Amanda`,`Ben`, `Danny`, `Jason`,`Mike` e `Zoye`
+|Grachá| <img src="./Participantes/Amanda.jpeg" height="55">,<img src="./Participantes/Ben.jpeg" height="55">,<img src="./Participantes/Danny.jpeg" height="55">,<img src="./Participantes/Jason.jpeg" height="55">,<img src="./Participantes/Mike.jpeg" height="55">,<img src="./Participantes/Zoye.jpeg" height="55">
+<hr>
+Contribuição Pull requests são muito bem-vindas,além dos Issues que podem ser de todos os tipos,como: Sugestões,Dúvidas, Melhorias
+<hr>
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%">
 
+Autora
+<br>Programadora Back-End: Ionara Parreira
 
-
-
+Contribuição do Conteúdo Visual
+<br>
+Videomaker: João Rubinstein
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%">
+<h2>Obrigada por usar este repositório😉. E se ele te ajudou de alguma forma, deixe uma ⭐ em troca</h2>
+                                                                                                                                                                                                                                                     
