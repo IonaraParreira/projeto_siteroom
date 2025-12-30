@@ -1,23 +1,31 @@
 import pygame
 import sys
+import os
 
 pygame.init()
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Caça à Mosca")
+pygame.display.set_caption("Caça à Mosca - don't let it escape")
 
 # Cores
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-GRAY = (200, 200, 200)
+
+try:
+    fly_image = pygame.image.load("mosca.png").convert_alpha()
+    #Redimensiona para um tamanho legal para o jogo
+    fly_image = pygame.transform.scale(fly_image,(80,60))
+except Exception as e:
+    print(f"Erro ao carregar a imagem: {e}")
+    pygame.quit()
+    sys.exit()
 
 # Variáveis da Mosca
 fly_x = SCREEN_WIDTH // 2
 fly_y = SCREEN_HEIGHT // 2
 fly_speed = 5
-fly_radius = 15
+fly_radius = 30
 is_alive = True  # Nova variável para saber se ela está voando
 
 clock = pygame.time.Clock()
@@ -33,28 +41,37 @@ while True:
             mouse_pos = pygame.mouse.get_pos()
             # Calcula a distância entre o mouse e a mosca
             dist = ((mouse_pos[0] - fly_x)**2 + (mouse_pos[1] - fly_y)**2)**0.5
-            if dist < fly_radius + 10: # Se o clique foi perto o suficiente
+            if dist < fly_radius: 
                 is_alive = False # A mosca para de se mexer!
 
     # Só se move se estiver viva
     if is_alive:
         fly_y += fly_speed
-        if fly_y <= 20 or fly_y >= SCREEN_HEIGHT - 20:
+        if fly_y <= 30 or fly_y >= SCREEN_HEIGHT - 30:
             fly_speed *= -1
 
     # DESENHO
-    screen.fill(WHITE)
+    screen.fill((0,0,0))
     
-    # Desenha as asas (se estiver viva)
     if is_alive:
-        pygame.draw.ellipse(screen, GRAY, (fly_x - 25, fly_y - 10, 20, 15)) # Asa esquerda
-        pygame.draw.ellipse(screen, GRAY, (fly_x + 5, fly_y - 10, 20, 15))  # Asa direita
-    
-    # Desenha o corpo (Círculo central)
-    pygame.draw.circle(screen, BLACK, (int(fly_x), int(fly_y)), fly_radius)
-    
-    # Desenha a cabeça
-    pygame.draw.circle(screen, BLACK, (int(fly_x), int(fly_y - 10 if fly_speed < 0 else fly_y + 10)), 8)
+        #Desenha a imagem mosca.png centralizada
+        screen.blit(fly_image, (fly_x - 40, fly_y - 30))
 
-    pygame.display.flip()
+    else:
+        font = pygame.font.Font("SpecialElite-Regular.ttf",30)
+        frases = [
+            "Você pegou.", 
+            "Na mosca!",
+            "'Homem que pega mosca com palitinhos,",
+            "realiza qualquer coisa.'",
+            " - Sr. Miyagi"
+        ]
+
+        #Cor Verde Harcker(0,255,0)
+        pos_y = SCREEN_HEIGHT // 2 - 40
+        for linha in frases:
+            img_texto = font.render(linha,True,(0,255,0))
+            screen.blit(img_texto,(50, pos_y))
+            pos_y += 40 #isso faz "pular" a linha para baixo
+    pygame.display.update()
     clock.tick(60)
