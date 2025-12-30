@@ -51,16 +51,27 @@ while True:
             fly_speed *= -1
 
     # DESENHO
-    screen.fill(WHITE)
+    screen.fill((0,0,0))
     
     if is_alive:
         #Desenha a imagem mosca.png centralizada
         screen.blit(fly_image, (fly_x - 40, fly_y - 30))
 
     else:
-        font = pygame.font.SysFont(None, 48)
-        img_texto = font.render('Você pegou a mosca!',True, (0,150,0))
-        screen.blit(img_texto,(200, SCREEN_HEIGHT // 2))
+        font = pygame.font.Font("SpecialElite-Regular.ttf",30)
+        frases = [
+            "Você pegou.", 
+            "Na mosca!",
+            "'Homem que pega mosca com palitinhos,",
+            "realiza qualquer coisa.'",
+            " - Sr. Miyagi"
+        ]
 
-    pygame.display.flip()
+        #Cor Verde Harcker(0,255,0)
+        pos_y = SCREEN_HEIGHT // 2 - 40
+        for linha in frases:
+            img_texto = font.render(linha,True,(0,255,0))
+            screen.blit(img_texto,(50, pos_y))
+            pos_y += 40 #isso faz "pular" a linha para baixo
+    pygame.display.update()
     clock.tick(60)
