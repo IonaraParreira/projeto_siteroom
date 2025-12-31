@@ -1,6 +1,6 @@
 body{
     /*Caminho para a foto saindo da pasta css e entrano na de fotos */
-    background-image: url('../Home%20Page/EscapeRoom1.png');
+    background-image: url('../projeto_fotos_site/EscapeRoom1.png');
     background-size: cover;/* Faz a imagem cobrir a tela toda*/;
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat;
@@ -9,25 +9,25 @@ body{
 
     color: #ffffff;
     font-family: 'Courier New', Courier,monospace;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    text-align:right;
+    margin: 10px;
+    padding: 100px;
 }
 
 
 /* Estilo dos Botões */
 .btn-escape {
-    background-color: #8b0000; /* Vermelho sangue */
+    background-color: #980303; /* Vermelho sangue */
     color: white;
-    padding: 15px 30px;
+    padding: 15px 15px;
     border: 2px solid #5a0000;
-    border-radius: 5px;
+    border-radius:100px;
     cursor: pointer;
-    font-size: 18px;
-    text-decoration: none;
+    font-size:20px;
+    text-decoration:none;
     transition: 0.3s;
     display: inline-block;
-    margin: 20px;
+    margin: 450px 20px 20px 20px;
 }
 
 /* Efeito ao passar o mouse */
