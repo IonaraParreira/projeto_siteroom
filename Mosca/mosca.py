@@ -13,7 +13,7 @@ pygame.display.set_caption("Caça à Mosca - don't let it escape")
 WHITE = (255, 255, 255)
 
 try:
-    fly_image = pygame.image.load("mosca.png").convert_alpha()
+    fly_image = pygame.image.load("Mosca/mosca.png").convert_alpha()
     #Redimensiona para um tamanho legal para o jogo
     fly_image = pygame.transform.scale(fly_image,(80,60))
 except Exception as e:
@@ -58,7 +58,7 @@ while True:
         screen.blit(fly_image, (fly_x - 40, fly_y - 30))
 
     else:
-        font = pygame.font.Font("SpecialElite-Regular.ttf",30)
+        font = pygame.font.Font("Mosca/SpecialElite-Regular.ttf",30)
         frases = [
             "Você pegou.", 
             "Na mosca!",
