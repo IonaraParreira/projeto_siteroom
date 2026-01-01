@@ -41,16 +41,6 @@ body{
     font-family: 'Special Elite', cursive;
 }
 
-body {
-    background-image: url('../projeto_fotos_site/cenario.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
 
 /* --- BOTÃO 1: AZUL VIBRANTE (Retangular) --- */
 .btn-azul {
