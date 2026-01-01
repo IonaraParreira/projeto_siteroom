@@ -36,5 +36,61 @@ body{
     box-shadow: 0 0 15px #ff0000;
 }
 
+/* Aplicando a fonte Special Elite em todo o site */
+* {
+    font-family: 'Special Elite', cursive;
+}
 
+body {
+    background-image: url('../projeto_fotos_site/cenario.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- BOTÃO 1: AZUL VIBRANTE (Retangular) --- */
+.btn-azul {
+    background-color: #0047ab;
+    color: white;
+    padding: 15px 30px;
+    border: 2px solid #002355;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s;
+}
+.btn-azul:hover { background-color: #007bff; box-shadow: 0 0 15px #007bff; }
+
+/* --- BOTÃO 2: VERDE "HACKER" (Bordas Arredondadas) --- */
+.btn-verde {
+    background-color: #006400;
+    color: #00ff00;
+    padding: 15px 30px;
+    border: 2px solid #00ff00;
+    border-radius: 20px; /* Arredondado */
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s;
+}
+.btn-verde:hover { background-color: #00ff00; color: black; }
+
+/* --- BOTÃO 3: AMARELO ALERTA (Circular/Oval) --- */
+.btn-amarelo {
+    background-color: #ffcc00;
+    color: black;
+    padding: 25px 20px;
+    border: 3px dashed black;
+    border-radius: 50%; /* Faz ficar oval/circular */
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-amarelo:hover { transform: scale(1.1); background-color: #ffff00; }
  
