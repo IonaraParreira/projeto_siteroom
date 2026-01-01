@@ -42,18 +42,21 @@ body{
 }
 
 
-/* --- BOTÃO 1: AZUL VIBRANTE (Retangular) --- */
-.btn-azul {
-    background-color: #0047ab;
-    color: white;
-    padding: 15px 30px;
-    border: 2px solid #002355;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px;
-    transition: 0.3s;
+/* Estilizando o botão de imagem */
+.botao-chave img {
+    width: 150px; /* Tamanho da chave na tela */
+    border-radius: 50%; /* Como a keywhite é redonda, isso ajuda no contorno */
+    transition: all 0.4s ease; /* Suaviza o movimento */
+    cursor: pointer;
+    border: 3px solid transparent;
 }
-.btn-azul:hover { background-color: #007bff; box-shadow: 0 0 15px #007bff; }
+
+/* Efeito de destaque quando o jogador encontra a chave */
+.botao-chave img:hover {
+    transform: scale(1.1) rotate(5deg); /* Aumenta e gira levemente */
+    filter: drop-shadow(0 0 15px #ffffff); /* Cria um brilho branco atrás */
+    border: 3px solid #ffffff; /* Aparece uma borda branca */
+}
 
 /* --- BOTÃO 2: VERDE "HACKER" (Bordas Arredondadas) --- */
 .btn-verde {
