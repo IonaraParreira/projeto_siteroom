@@ -18,7 +18,7 @@ body{
 /* Estilo dos Botões */
 .btn-escape {
     background-color: #980303; /* Vermelho sangue */
-    color: white;
+    color: black;
     padding: 15px 15px;
     border: 2px solid #5a0000;
     border-radius:100px;
@@ -44,7 +44,7 @@ body{
 
 /* Estilizando o botão de imagem */
 .botao-chave img {
-    width: 150px; /* Tamanho da chave na tela */
+    width: 80px; /* Tamanho da chave na tela */
     border-radius: 50%; /* Como a keywhite é redonda, isso ajuda no contorno */
     transition: all 0.4s ease; /* Suaviza o movimento */
     cursor: pointer;
@@ -53,8 +53,8 @@ body{
 
 /* Efeito de destaque quando o jogador encontra a chave */
 .botao-chave img:hover {
-    transform: scale(1.1) rotate(5deg); /* Aumenta e gira levemente */
-    filter: drop-shadow(0 0 15px #ffffff); /* Cria um brilho branco atrás */
+    transform: scale(1.1) rotate(45deg); /* Aumenta e gira levemente */
+    filter: drop-shadow(0 0 20px #ffffff); /* Cria um brilho branco atrás */
     border: 3px solid #ffffff; /* Aparece uma borda branca */
 }
 
@@ -64,7 +64,7 @@ body{
     color: #00ff00;
     padding: 15px 30px;
     border: 2px solid #00ff00;
-    border-radius: 20px; /* Arredondado */
+    border-radius: 30px; /* Arredondado */
     text-decoration: none;
     display: inline-block;
     margin: 10px;
@@ -72,18 +72,4 @@ body{
 }
 .btn-verde:hover { background-color: #00ff00; color: black; }
 
-/* --- BOTÃO 3: AMARELO ALERTA (Circular/Oval) --- */
-.btn-amarelo {
-    background-color: #ffcc00;
-    color: black;
-    padding: 25px 20px;
-    border: 3px dashed black;
-    border-radius: 50%; /* Faz ficar oval/circular */
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-.btn-amarelo:hover { transform: scale(1.1); background-color: #ffff00; }
- 
+
