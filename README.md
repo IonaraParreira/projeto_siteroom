@@ -12,7 +12,7 @@ Então, que tal fazer algo que realmente te desafie neste feriado?
 Entre, explore, arrisque-se…
 e divirta-se.
 
-Clique aqui 👉 e comece o jogo.
+Clique aqui 👉 https://ionaraparreira.github.io/projeto_siteroom/ e comece o jogo.
 
 ESTILO GERAL 
 Clima: Mistério + desafio + curiosidade
