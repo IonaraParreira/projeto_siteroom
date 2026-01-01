@@ -44,6 +44,10 @@ Autora
 Contribuição do Conteúdo Visual
 <br>
 Videomaker: João Rubinstein
+## 🔗 Conecte-se com o Zanzinho
+
+[![Discord](https://img.shields.io/badge/Discord-Zanzinho-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/noodles)
+[![Website](https://img.shields.io/badge/Site-Zanzinho-FF4500?style=for-the-badge&logo=google-chrome&logoColor=white)](https://noodlespicante.com.br)
 <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png" width="100%">
 <h2>Obrigada por ver este repositório😉. E se ele te ajudou de alguma forma, deixe uma ⭐ em troca</h2>
                                                                                                                                                                                                                                                      
