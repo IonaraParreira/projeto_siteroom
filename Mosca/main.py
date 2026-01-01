@@ -13,12 +13,12 @@ async def main(): #Função principal assíncrona para compatibilidade web
 
 # Carregamento de Assets
     try:
-        fly_image = pygame.image.load("Mosca/mosca.png").convert_alpha()
+        fly_image = pygame.image.load("mosca.png").convert_alpha()
     #Redimensiona para um tamanho legal para o jogo
         fly_image = pygame.transform.scale(fly_image, (80,60))
 
     #Carregando o som da mosca
-        fly_sound = pygame.mixer.Sound("Mosca/mosca.mp3")
+        fly_sound = pygame.mixer.Sound("mosca.mp3")
     #Inicia o som em loop (-1 sgnifica repetição infinita)
         fly_sound.play(loops=-1)
 
@@ -63,7 +63,7 @@ async def main(): #Função principal assíncrona para compatibilidade web
             screen.blit(fly_image, (fly_x - 40, fly_y - 30))
         
         else:
-            font = pygame.font.Font("Mosca/SpecialElite-Regular.ttf",30)
+            font = pygame.font.Font("SpecialElite-Regular.ttf",30)
             frases = [
             "Você pegou.", 
             "Na mosca!",
