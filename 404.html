@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR 404</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            /* Forçamos o reset para o robô centralizar */
+            margin: 0;
+            padding: 0 !important;
+            text-align: center !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Fundo para preencher espaços vazios */
+        }
+
+        .container-erro {
+            position: relative; /* Necessário para esconder a porta sobre o robô */
+            display: inline-block;
+        }
+
+        .img-robo {
+            max-width: 600px;
+            display: block;
+        }
+
+        /* Escondendo o botão da porta em cima do robô */
+        .link-porta-escondida {
+            position: absolute;
+            top: 45%; /* Ajuste esses valores para alinhar com a barriga do robô */
+            left: 48%;
+            width: 60px; /* Tamanho da área clicável da porta */
+            opacity: 0.8; /* Deixe em 0 para ficar totalmente invisível */
+            transition: 0.3s;
+        }
+
+        .link-porta-escondida img {
+            width: 100%;
+        }
+
+        .link-porta-escondida:hover {
+            opacity: 1; /* Ela brilha quando o dev passa o mouse */
+            filter: drop-shadow(0 0 10px #00ff00);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container-erro">
+        <img src="error.jpg" alt="Robô com defeito" class="img-robo">
+
+        <a href="index.html" class="link-porta-escondida">
+            <img src="projeto_fotos_site/porta.png" alt="Porta de saída">
+        </a>
+    </div>
+
+</body>
+</html>
