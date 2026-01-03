@@ -14,8 +14,7 @@ e divirta-se.
 
 Clique aqui 👉 https://ionaraparreira.github.io/projeto_siteroom/ e comece o jogo.
 
-ESTILO GERAL 
-Clima: Mistério + desafio + curiosidade
+Gênero: Ação,Aventura,Drama,Suspense,Terror
 
 
 |Elementos|
