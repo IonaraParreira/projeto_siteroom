@@ -8,56 +8,60 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
-            /* Forçamos o reset para o robô centralizar */
-            margin: 0;
+            margin: 0 !important;
             padding: 0 !important;
-            text-align: center !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #000; /* Fundo para preencher espaços vazios */
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            height: 100vh !important;
+            width: 100vw !important;
+            background-color: #f4f4f4 !important;
+            background-image: none !important;
+            overflow: hidden; /* Evita barras de rolagem */
         }
 
         .container-erro {
-            position: relative; /* Necessário para esconder a porta sobre o robô */
-            display: inline-block;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
         }
 
         .img-robo {
-            max-width: 600px;
+            /* Aumentamos aqui para ocupar quase a tela toda */
+            height: 85vh; 
+            width: auto;
+            max-width: 95vw;
             display: block;
         }
 
-        /* Escondendo o botão da porta em cima do robô */
-        .link-porta-escondida {
+        .botao-porta {
             position: absolute;
-            top: 45%; /* Ajuste esses valores para alinhar com a barriga do robô */
-            left: 48%;
-            width: 60px; /* Tamanho da área clicável da porta */
-            opacity: 0.8; /* Deixe em 0 para ficar totalmente invisível */
+            /* Coordenadas recalibradas para o robô grande */
+            top: 64%;    
+            left: 54.5%;   
+            transform: translate(-50%, -50%);
+            width: 6vh; /* Tamanho proporcional à altura */
+            opacity: 0;   
             transition: 0.3s;
+            z-index: 10;
         }
 
-        .link-porta-escondida img {
-            width: 100%;
-        }
-
-        .link-porta-escondida:hover {
-            opacity: 1; /* Ela brilha quando o dev passa o mouse */
-            filter: drop-shadow(0 0 10px #00ff00);
+        .botao-porta:hover {
+            opacity: 1;
+            filter: drop-shadow(0 0 10px white);
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    
     <div class="container-erro">
-        <img src="error.jpg" alt="Robô com defeito" class="img-robo">
-
-        <a href="index.html" class="link-porta-escondida">
-            <img src="projeto_fotos_site/porta.png" alt="Porta de saída">
+        <img src="error.png" alt="Robô" class="img-robo">
+        <a href="index.html" class="botao-porta"> 
+            <img src="exit.png" alt="Sair" style="width: 100%;">
         </a>
     </div>
-
 </body>
 </html>
