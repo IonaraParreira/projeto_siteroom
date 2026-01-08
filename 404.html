@@ -10,40 +10,34 @@
         body {
             margin: 0 !important;
             padding: 0 !important;
+            height: 100vh !important;
+            width: 100vw !important;
             display: flex !important;
             justify-content: center !important;
             align-items: center !important;
-            height: 100vh !important;
-            width: 100vw !important;
-            background-color: #f4f4f4 !important;
-            background-image: none !important;
-            overflow: hidden; /* Evita barras de rolagem */
+            background-image: none !important; 
+            background-color: #ffffff !important;
         }
 
         .container-erro {
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
+            display: inline-block;
+            height: 100vh; 
         }
 
         .img-robo {
-            /* Aumentamos aqui para ocupar quase a tela toda */
-            height: 85vh; 
+            height: 100vh; 
             width: auto;
-            max-width: 95vw;
             display: block;
         }
 
+        /* PORTA MAIOR E MAIS PRA DENTRO DA BARRIGA */
         .botao-porta {
             position: absolute;
-            /* Coordenadas recalibradas para o robô grande */
-            top: 64%;    
-            left: 54.5%;   
+            top: 63.5%;    /* Ajustado para descer um pouco mais */
+            left: 54.3%; /* Centralizado na abertura */
             transform: translate(-50%, -50%);
-            width: 6vh; /* Tamanho proporcional à altura */
+            width: 11vh; /* Aumentado para ocupar mais a barriga */
             opacity: 0;   
             transition: 0.3s;
             z-index: 10;
@@ -51,17 +45,51 @@
 
         .botao-porta:hover {
             opacity: 1;
-            filter: drop-shadow(0 0 10px white);
+            filter: drop-shadow(0 0 15px rgb(28, 24, 1));
             cursor: pointer;
+        }
+
+        /* Estilo para a tela da frase de impacto */
+        #aviso-saida {
+            display: none; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            background-color: #000; 
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
         }
     </style>
 </head>
 <body>
-    <div class="container-erro">
-        <img src="error.png" alt="Robô" class="img-robo">
-        <a href="index.html" class="botao-porta"> 
-            <img src="exit.png" alt="Sair" style="width: 100%;">
+
+    <div class="container-erro" id="conteudo-robo">
+        <img src="exit2.png" alt="Robô" class="img-robo">
+
+        <a href="javascript:void(0)" class="botao-porta" onclick="mostrarAviso()"> 
+            <img src="exit4.png" alt="Sair" style="width: 100%;">
         </a>
     </div>
+
+    <div id="aviso-saida">
+        <h2 style="color: #ff0000; font-family: 'Special Elite', cursive; margin-bottom: 30px; text-align: center; padding: 20px;">
+            UMA VEZ DENTRO, APENAS JOGANDO PARA SAIR.
+        </h2>
+        <a href="index.html" class="btn-escape" style="text-decoration: none;">VOLTAR AO JOGO</a>
+    </div>
+
+    <script>
+        function mostrarAviso() {
+            // Esconde o container do robô
+            document.getElementById('conteudo-robo').style.display = 'none';
+            // Mostra a tela preta com a frase
+            document.getElementById('aviso-saida').style.display = 'flex';
+        }
+    </script>
+
 </body>
 </html>

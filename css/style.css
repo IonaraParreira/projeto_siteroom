@@ -7,13 +7,7 @@ body{
     background-attachment: fixed;
     background-color:#0d0d0d; /*Fundo reserva caso a imagem falhe */
 
-    color: #ffffff;
-    font-family: 'Courier New', Courier,monospace;
-    text-align:right;
-    margin: 10px;
-    padding: 100px;
-
-        padding: 0 !important; /* Anula os 100px do CSS principal */
+            padding: 0 !important; /* Anula os 100px do CSS principal */
         text-align: center !important; /* Garante que o robô fique no meio, não na direita */
         display: flex;
         flex-direction: column;
@@ -22,7 +16,23 @@ body{
         height: 100vh;
 
     }
-
+    .botao-porta {
+    position: absolute;
+    /* Coordenadas precisas para o centro da barriga do SEU robô */
+    top: 61.8%;    
+    left: 51.8%;   
+    
+    /* O translate garante que o 'alvo' do clique seja o centro da portinha */
+    transform: translate(-50%, -50%);
+    
+    /* Tamanho ideal para cobrir as engrenagens sem sobrar */
+    width: 05vh;   
+    
+    opacity: 0;    /* Mude para 1 se quiser ver a porta enquanto testa */
+    transition: 0.3s;
+    z-index: 10;
+    cursor: pointer;
+}
 
 /* Estilo dos Botões */
 .btn-escape {
